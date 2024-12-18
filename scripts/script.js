@@ -85,7 +85,7 @@ function createFallingElement() {
 }
 
 // Continuously generate falling elements
-setInterval(createFallingElement, 100); 
+setInterval(createFallingElement, 300); 
 
 function createStars() {
     const starCount = 50; 
@@ -100,3 +100,34 @@ function createStars() {
 }
 
 createStars();
+
+function createShootingStar() {
+    const star = document.createElement('div');
+    star.style.position = 'fixed';
+    star.style.width = '15px';
+    star.style.height = '15px';
+    
+    // Randomize colors
+    const colors = ['coral', 'tomato', 'brown', 'pink', 'crimson'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    star.style.background = randomColor;
+    star.style.borderRadius = '50%';
+    star.style.top = Math.random() * 50 + 'vh';
+    star.style.left = '0px';
+    star.style.boxShadow = `0 0 10px ${randomColor}`;
+
+    document.body.appendChild(star);
+
+    star.animate(
+        [
+            { transform: 'translateX(-50%)' },
+            { transform: `translateX(${window.innerWidth}px)` }
+        ],
+        { duration: 3000, easing: 'ease-out' }
+    );
+
+    setTimeout(() => star.remove(), 3000);
+}
+
+
+setInterval(createShootingStar, 2000); 
