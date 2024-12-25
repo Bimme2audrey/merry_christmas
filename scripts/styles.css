@@ -24,7 +24,7 @@
         }
         
 #greeting {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     animation: fadeIn 1.5s ease-out, bounce 1.2s infinite alternate;
 }
 
