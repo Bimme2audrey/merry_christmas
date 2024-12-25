@@ -17,6 +17,7 @@
         }
         h1 {
             margin-top: 20vh;
+            font-size: 2rem;
             animation: fadeIn 2s ease-out;
             color: white;
             text-shadow: 2px 2px 5px rgb(10, 10, 10);
