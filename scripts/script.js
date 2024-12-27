@@ -18,7 +18,7 @@ particlesJS("particles-js", {
     retina_detect: true,
 });
 
-//  Google OAuth Callback Function
+/* Google OAuth Callback Function
 function handleCredentialResponse(response) {
     
     const script = document.createElement("script");
@@ -35,9 +35,9 @@ function handleCredentialResponse(response) {
         Joyeux Noël,${userName} Merry Merry!❄️🎉`;
     };
     document.head.appendChild(script);
-}
+}*/
 
-// Loadx the Google OAuth Library
+/*Loadx the Google OAuth Library
 window.onload = function () {
     google.accounts.id.initialize({
         client_id: "901849007142-f294t2bc48pmj4bjfv67qk7ra5ivdeja.apps.googleusercontent.com",  
@@ -50,7 +50,17 @@ window.onload = function () {
     );
 
     google.accounts.id.prompt(); 
-};
+};*/
+
+
+const button = document.getElementById('reveal-button');
+const hiddenMessage = document.getElementById('hidden-message');
+
+button.addEventListener('click', () => {
+    hiddenMessage.style.display = 'block';
+    button.style.display = 'none'; 
+});
+
 
 
  const snowflakeCount = 100; 
